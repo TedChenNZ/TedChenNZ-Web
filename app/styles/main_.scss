@@ -1,0 +1,136 @@
+// Colours
+$bg: #fff;
+$fg: #333;
+$sep: #D3D3D3;
+$c1: #EDB066;
+$c2: #FFFFFF;
+$c3: #945C34;
+$c4: #403B41;
+$c5: #D4E0F0;
+
+// Fonts
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html {
+    height: 100%;
+}
+#sidemenu {
+    background: $bg;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 60px;
+    z-index: 999;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    border-right: 1px solid $sep;
+}
+
+main {
+    margin-left: 60px;
+    height: 100%;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li {
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: $sep;
+        padding: 0;
+        a {
+            display: block;
+            text-decoration: none;
+            color: $fg;
+            transition: background-color 0.2s ease-out;
+            text-align: center;
+            height: 60px;
+            padding-top: 20px;
+        }
+
+        a:visited {
+            color: $fg;
+        }
+
+        a:hover {
+            transition: background-color 0.2s ease-out;
+            // border-color: $c3;
+            background-color: $c1;
+            color: $bg;
+        }
+
+
+    }
+
+    li:before {
+        content: none;
+    }
+}
+
+
+/* -----------------------------------
+      Home
+   ----------------------------------- */
+
+#home, #main_section, .overlay {
+    height: 100%;
+    min-height: 300px;
+}
+#main_section {
+    background: url('../images/unsplash_52b6b4db7397c_1.JPG') 50% 50% / cover no-repeat;
+    text-align: center;
+    width: 100%;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $c1;
+        opacity: 0.9;
+    }
+
+    #titles {
+        position: absolute;
+        top: 33%;
+        width: 100%;
+        margin-left: -60px;
+        padding-left: 60px;
+
+        #name {
+            // font-size: 68px;
+            font-size: 108px;
+            margin-top: 0px;
+            padding-top: 0px;
+            color: white;
+            text-transform: uppercase;
+            font-family: "bebas_neueregular", "Roboto Condensed";
+            letter-spacing: 0.2em;
+        }
+        #slogan {
+            margin-top: 0px;
+            padding-top: 0px;
+            font-size: 42px;
+            bottom: 10px;
+            color: white;
+            text-transform: uppercase;
+            font-family: "bebas_neueregular", "Roboto Condensed";
+            letter-spacing: 0.1em;
+        }
+    }
+}
+
+
